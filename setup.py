@@ -6,8 +6,12 @@ sdnoise = Extension('sdnoise',
                                'src/sdnoisemodule.c'])
 
 setup (name = 'sdnoise',
+       platforms='any',
        version = '0.1.0',
-       description = 'test',
+       description = 'A Python wrapper for simplex noise functions with analytical derivatives.',
        author = 'Oliver John Hitchcock',
-       url = 'https://github.com/c0rp3n',
+       author_email = 'ojhitchcock@gmail.com',
+       url = 'https://github.com/open-terra/pysdnoise/',
+       download_url = 'https://github.com/open-terra/pysdnoise/archive/master.zip',
+       keywords = ['simplex', 'noise', 'procedural'],
        ext_modules = [sdnoise])
