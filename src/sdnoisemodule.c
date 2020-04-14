@@ -55,20 +55,21 @@ static PyObject* sdnoise_snoise4(PyObject *self, PyObject *args)
     return Py_BuildValue("fffff", n, dx, dy, dz, dw);
 }
 
-static PyMethodDef sdnoise_methods[] = {
+static PyMethodDef sdnoise_methods[] =
+{
     {"snoise1", sdnoise_snoise1, METH_VARARGS, "Calculate Simplex 1D noise with gradients."},
     {"snoise2", sdnoise_snoise2, METH_VARARGS, "Calculate Simplex 2D noise with gradients."},
     {"snoise3", sdnoise_snoise3, METH_VARARGS, "Calculate Simplex 3D noise with gradients."},
     {"snoise4", sdnoise_snoise4, METH_VARARGS, "Calculate Simplex 4D noise with gradients."},
-    {NULL, NULL, 0, NULL}        /* Sentinel */
+    {NULL, NULL, 0, NULL}
 };
 
-static struct PyModuleDef sdnoise_module = {
+static struct PyModuleDef sdnoise_module =
+{
     PyModuleDef_HEAD_INIT,
-    "sdnoise",   /* name of module */
-    NULL, /* module documentation, may be NULL */
-    -1,       /* size of per-interpreter state of the module,
-                 or -1 if the module keeps state in global variables. */
+    "sdnoise",
+    NULL,
+    -1,
     sdnoise_methods
 };
 
