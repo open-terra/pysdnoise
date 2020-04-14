@@ -1,0 +1,3 @@
+[submodule "deps/perlin-noise"]
+	path = deps/perlin-noise
+	url = https://github.com/stegu/perlin-noise.git
