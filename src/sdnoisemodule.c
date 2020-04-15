@@ -3,7 +3,7 @@
 
 #include "sdnoise1234.h"
 
-static PyObject* sdnoise_snoise1(PyObject *self, PyObject *args)
+static PyObject* sdnoise_sdnoise1(PyObject *self, PyObject *args)
 {
     float x;
 
@@ -16,7 +16,7 @@ static PyObject* sdnoise_snoise1(PyObject *self, PyObject *args)
     return Py_BuildValue("ff", n, dx);
 }
 
-static PyObject* sdnoise_snoise2(PyObject *self, PyObject *args)
+static PyObject* sdnoise_sdnoise2(PyObject *self, PyObject *args)
 {
     float x, y;
 
@@ -29,7 +29,7 @@ static PyObject* sdnoise_snoise2(PyObject *self, PyObject *args)
     return Py_BuildValue("fff", n, dx, dy);
 }
 
-static PyObject* sdnoise_snoise3(PyObject *self, PyObject *args)
+static PyObject* sdnoise_sdnoise3(PyObject *self, PyObject *args)
 {
     float x, y, z;
 
@@ -42,7 +42,7 @@ static PyObject* sdnoise_snoise3(PyObject *self, PyObject *args)
     return Py_BuildValue("ffff", n, dx, dy, dz);
 }
 
-static PyObject* sdnoise_snoise4(PyObject *self, PyObject *args)
+static PyObject* sdnoise_sdnoise4(PyObject *self, PyObject *args)
 {
     float x, y, z, w;
 
@@ -57,10 +57,10 @@ static PyObject* sdnoise_snoise4(PyObject *self, PyObject *args)
 
 static PyMethodDef sdnoise_methods[] =
 {
-    {"snoise1", sdnoise_snoise1, METH_VARARGS, "Calculate Simplex 1D noise with gradients."},
-    {"snoise2", sdnoise_snoise2, METH_VARARGS, "Calculate Simplex 2D noise with gradients."},
-    {"snoise3", sdnoise_snoise3, METH_VARARGS, "Calculate Simplex 3D noise with gradients."},
-    {"snoise4", sdnoise_snoise4, METH_VARARGS, "Calculate Simplex 4D noise with gradients."},
+    {"sdnoise1", sdnoise_sdnoise1, METH_VARARGS, "Calculate Simplex 1D noise with gradients."},
+    {"sdnoise2", sdnoise_sdnoise2, METH_VARARGS, "Calculate Simplex 2D noise with gradients."},
+    {"sdnoise3", sdnoise_sdnoise3, METH_VARARGS, "Calculate Simplex 3D noise with gradients."},
+    {"sdnoise4", sdnoise_sdnoise4, METH_VARARGS, "Calculate Simplex 4D noise with gradients."},
     {NULL, NULL, 0, NULL}
 };
 
