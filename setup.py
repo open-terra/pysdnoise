@@ -3,6 +3,7 @@ from distutils.core import setup, Extension
 sdnoise = Extension('sdnoise',
                     include_dirs=['deps/perlin-noise/src'],
                     sources = ['deps/perlin-noise/src/sdnoise1234.c',
+                               'deps/perlin-noise/src/srdnoise23.c',
                                'src/sdnoisemodule.c'])
 
 setup (name = 'sdnoise',
