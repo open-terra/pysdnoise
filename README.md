@@ -16,9 +16,9 @@ dragons.*
 
 ## Usage
 ```Python
-from sdnoise import snoise2
+from sdnoise import sdnoise2
 
-n, dx, dy = snoise2(25.52, 30.06)
+n, dx, dy = sdnoise2(25.52, 30.06)
 ```
 
 ## Download
