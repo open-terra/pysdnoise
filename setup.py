@@ -1,4 +1,7 @@
 from distutils.core import setup, Extension
+from os.path import abspath
+
+print(abspath('./deps/perlin-noise/src'))
 
 sdnoise = Extension('sdnoise',
                     include_dirs=['deps/perlin-noise/src'],
@@ -8,11 +11,6 @@ sdnoise = Extension('sdnoise',
 
 setup (name = 'sdnoise',
        platforms='any',
-       version = '0.1.0',
-       description = 'A Python wrapper for simplex noise functions with analytical derivatives.',
-       author = 'Oliver John Hitchcock',
-       author_email = 'ojhitchcock@gmail.com',
-       url = 'https://github.com/open-terra/pysdnoise/',
-       download_url = 'https://github.com/open-terra/pysdnoise/archive/master.zip',
-       keywords = ['simplex', 'noise', 'procedural'],
-       ext_modules = [sdnoise])
+       version = '1.0.0',
+       ext_modules = [sdnoise],
+       include_package_data=True)
